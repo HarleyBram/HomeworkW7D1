@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div id="app">
+        <ul>
+          <li v-for="things in toDos">
+            <span>{{item}}</span>
+          </li>
+        </ul>
+        <form v-on:submit.prevent="saveNewToDo">
+          <label for="newtoDo">Add to list:</label>
+          <input type="text" id="new-toDo" v-model="newToDo">
+          <input type="submit" value="Save New ToDo">
+        </form>
+      </div>
+    </body>
+    </html>
+  </body>
+</html>
